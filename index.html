@@ -1,0 +1,79 @@
+<!-- @format -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Browser API</title>
+  </head>
+  <body>
+    <div class="container">
+      <section>
+        <h2>Drag and Drop</h2>
+
+        <div class="parent">
+          <div
+            class="origin dropzone"
+            draggable="true"
+            ondragover="dragOver(event)"
+            ondrop="drop(event)">
+            <h4>To-do</h4>
+            <div
+              id="drag-1"
+              class="draggable"
+              ondragstart="dragStart(event)"
+              draggable="true">
+              Item 1
+            </div>
+            <div
+              id="drag-2"
+              class="draggable"
+              ondragstart="dragStart(event)"
+              draggable="true">
+              Item 2
+            </div>
+            <div
+              id="drag-3"
+              class="draggable"
+              ondragstart="dragStart(event)"
+              draggable="true">
+              Item 3
+            </div>
+          </div>
+
+          <div class="dropzone" ondragover="dragOver(event)" ondrop="drop(event)">
+            <h4>Doing</h4>
+          </div>
+
+          <div class="dropzone" ondragover="dragOver(event)" ondrop="drop(event)">
+            <h4>feito</h4>
+          </div>
+        </div>
+      </section>
+      <section>
+        <h2>Geolocation</h2>
+
+        <iframe
+          width="600"
+          height="500"
+          frameborder="0"
+          scrolling="no"
+          marginheight="0"
+          marginwidth="0"
+          X-Frame-Options
+          id="gmap_canvas"
+          name="map"
+          src=""></iframe>
+      </section>
+      <section>
+        <h2>Notificações</h2>
+        <button onclick="getNotifications()">Ativar notificações.</button>
+      </section>
+    </div>
+    <script src="./js/scripts.js"></script>
+    <script src="./js/notfication.js"></script>
+    <script src="./js/geolocation.js"></script>
+  </body>
+</html>
